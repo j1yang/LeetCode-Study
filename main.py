@@ -1,3 +1,7 @@
-x = [9]
-x[-1] = x[-1] + 1
-print(x[-1])
+res = str("A man, a plan, a canal: Panama").lower()
+stack = []
+
+for i in res:
+    if i.isalnum():
+        stack.append(i)
+print(stack)

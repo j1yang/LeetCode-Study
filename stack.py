@@ -31,3 +31,23 @@ def isValid(self, s: str) -> bool:
     # False if all characters have been checked but the stack is not empty. Meaning there is an
     # unclosed bracket.
     return stack == []
+
+# 125 Valid Palindrome
+
+
+def isPalindrome(self, s: str) -> bool:
+    res = str(s).lower()
+    stack = []
+
+    for i in res:
+        if i.isalnum():
+            stack.append(i)
+
+    if not stack:
+        return True
+    else:
+        for ch in stack:
+            if ch == stack[-1]:
+                stack.pop()
+            else:
+                return False
