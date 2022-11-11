@@ -12,3 +12,18 @@ def lengthOfLastWord(self, s: str) -> int:
             c += 1
         else:
             return c
+
+
+# 14
+def longestCommonPrefix(self, strs: List[str]) -> str:
+    if not strs:
+        return ''
+    else:
+        l = list(zip(*strs))
+        prefix = ""
+        for i in l:
+            if len(set(i)) == 1:
+                prefix += i[0]
+            else:
+                break
+        return prefix
