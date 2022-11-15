@@ -29,3 +29,15 @@ class Solution:
             return digits
 
         return digits
+
+#202
+def isHappy(self, n: int) -> bool:
+        memo = set()
+        while n != 1:
+            n = sum(int(i) ** 2 for i in str(n))
+            if n in memo:
+                return False
+            else:
+                memo.add(n)
+        else:
+            return True
