@@ -37,3 +37,16 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         for j in range(i+1, len(nums)):
             if nums[i] == target - nums[j]:
                 return [i, j]
+
+
+#202
+def isHappy(self, n: int) -> bool:
+    memo = set()
+    while n != 1:
+        n = sum(int(i) ** 2 for i in str(n))
+        if n in memo:
+            return False
+        else:
+            memo.add(n)
+    else:
+        return True
