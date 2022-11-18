@@ -6,3 +6,9 @@ class Solution:
   def majorityElement(self, nums: List[int]) -> int:
     nums.sort()
     return nums[len(nums)//2]
+  #217
+  def containsDuplicate(self, nums: List[int]) -> bool:
+    if len(set(nums)) == len(nums):
+        return False
+    else:
+        return True
