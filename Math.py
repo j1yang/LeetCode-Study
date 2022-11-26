@@ -41,3 +41,12 @@ def isHappy(self, n: int) -> bool:
                 memo.add(n)
         else:
             return True
+
+#168
+def convertToTitle(self, columnNumber: int) -> str:
+        # Create an empty string for storing the characters...
+        output = ""
+        while columnNumber > 0:
+            output = chr(ord('A') + (columnNumber - 1) % 26) + output
+            columnNumber = (columnNumber - 1) // 26
+        return(output)
