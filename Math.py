@@ -50,3 +50,23 @@ def convertToTitle(self, columnNumber: int) -> str:
             output = chr(ord('A') + (columnNumber - 1) % 26) + output
             columnNumber = (columnNumber - 1) // 26
         return(output)
+
+#258
+def addDigits(self, num: int) -> int:
+    nums = list(str(num))
+    res = 0
+
+    if len(str(num)) == 1:
+        return num
+    else:
+        while len(nums) > 1:
+            for i in nums:
+                res += int(i)
+
+            nums = list(str(res))
+            res = 0
+            if len(nums) == 1:
+                return int(nums[0])
+#or. .. ... .
+def addDigits(self, num: int) -> int:
+        return num if num == 0 else num % 9 or 9
