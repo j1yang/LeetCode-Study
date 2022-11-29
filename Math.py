@@ -70,3 +70,10 @@ def addDigits(self, num: int) -> int:
 #or. .. ... .
 def addDigits(self, num: int) -> int:
         return num if num == 0 else num % 9 or 9
+
+#7
+def reverse(self, x: int) -> int:
+        if int(str(abs(x))[::-1]) > 2**31:
+            return 0
+
+        return int(str(x)[::-1]) if x > 0 else (-1)*int(str(abs(x))[::-1])
